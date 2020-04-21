@@ -1,0 +1,15 @@
+{
+  "name": "webhookstesttool",
+  "version": "1.0.0",
+  "description": "Webhooks Simulator Test Tool",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_TLS_REJECT_UNAUTHORIZED=0 node index.js"
+  },
+  "author": "Mobbex, Co",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "8.2.0",
+    "request": "2.88.2"
+  }
+}

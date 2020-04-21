@@ -1,0 +1,49 @@
+{
+    "type": "checkout",
+    "data": {
+        "result": true,
+        "view": {
+            "type": "cash",
+            "options": {
+                "barcode": true
+            }
+        },
+        "payment": {
+            "id": "5B8E1Lp_e",
+            "description": "Orden #000000018",
+            "operation": {
+                "type": "payment.v2"
+            },
+            "status": {
+                "code": "2",
+                "text": "En Espera",
+                "message": "El cupón vence a los 5 días de emitido."
+            },
+            "total": 107.4,
+            "currency": {
+                "code": "TEST",
+                "text": "Test Money",
+                "symbol": "T$"
+            },
+            "created": "2020-04-17T03:55:34.844Z",
+            "updated": "2020-04-17T03:55:34.943Z",
+            "reference": "000000018",
+            "source": {
+                "name": "Rapipago/PagoFácil",
+                "type": "cash",
+                "barcode": "04476141349252004210010740000000000000000000515003571314",
+                "url": "https://utils.mobbex.com/barcode/04476141349252004210010740000000000000000000515003571314?bcid=interleaved2of5&includetext=1&textxalign=center&textsize=11"
+            }
+        },
+        "user": {
+            "name": "Demo Mobbex",
+            "email": "demo@mobbex.com"
+        },
+        "source": {
+            "name": "Rapipago/PagoFácil",
+            "type": "cash",
+            "barcode": "04476141349252004210010740000000000000000000515003571314",
+            "url": "https://utils.mobbex.com/barcode/04476141349252004210010740000000000000000000515003571314?bcid=interleaved2of5&includetext=1&textxalign=center&textsize=11"
+        }
+    }
+}
