@@ -1,49 +1,68 @@
-{
-    "type": "checkout",
-    "data": {
-        "result": true,
-        "view": {
-            "type": "cash",
-            "options": {
-                "barcode": true
-            }
-        },
-        "payment": {
-            "id": "5B8E1Lp_e",
-            "description": "Orden #000000018",
-            "operation": {
-                "type": "payment.v2"
+[{
+    "url": "https://local.dev/webhook/?order_id=000000019",
+    "method": "POST",
+    "form": {
+        "type": "checkout",
+        "data": {
+            "result": true,
+            "view": {
+                "type": "card",
+                "options": {
+                    "data": [
+                        {
+                            "label": "Identificador de transacción",
+                            "type": "text",
+                            "value": "12345678"
+                        }
+                    ]
+                }
             },
-            "status": {
-                "code": "2",
-                "text": "En Espera",
-                "message": "El cupón vence a los 5 días de emitido."
+            "payment": {
+                "id": "lvn5KFSS7",
+                "description": "Orden Mi Compra",
+                "operation": {
+                    "type": "payment.v2"
+                },
+                "status": {
+                    "code": "200",
+                    "text": "Aprobado",
+                    "message": "Transacción Aprobada"
+                },
+                "total": 82,
+                "currency": {
+                    "code": "TEST",
+                    "text": "Test Money",
+                    "symbol": "T$"
+                },
+                "created": "2020-04-23T12:20:40.789Z",
+                "updated": "2020-04-23T12:20:41.297Z",
+                "reference": "000000020",
+                "source": {
+                    "name": "Visa Débito",
+                    "type": "card",
+                    "number": "450799******0010",
+                    "installment": {
+                        "description": "Debito",
+                        "amount": 82,
+                        "count": 1
+                    }
+                }
             },
-            "total": 107.4,
-            "currency": {
-                "code": "TEST",
-                "text": "Test Money",
-                "symbol": "T$"
+            "user": {
+                "name": "Demo Mobbex",
+                "email": "demo@mobbex.com"
             },
-            "created": "2020-04-17T03:55:34.844Z",
-            "updated": "2020-04-17T03:55:34.943Z",
-            "reference": "000000018",
             "source": {
-                "name": "Rapipago/PagoFácil",
-                "type": "cash",
-                "barcode": "04476141349252004210010740000000000000000000515003571314",
-                "url": "https://utils.mobbex.com/barcode/04476141349252004210010740000000000000000000515003571314?bcid=interleaved2of5&includetext=1&textxalign=center&textsize=11"
+                "name": "Visa Débito",
+                "type": "card",
+                "number": "450799******0010",
+                "installment": {
+                    "description": "Debito",
+                    "amount": 82,
+                    "count": 1
+                }
             }
-        },
-        "user": {
-            "name": "Demo Mobbex",
-            "email": "demo@mobbex.com"
-        },
-        "source": {
-            "name": "Rapipago/PagoFácil",
-            "type": "cash",
-            "barcode": "04476141349252004210010740000000000000000000515003571314",
-            "url": "https://utils.mobbex.com/barcode/04476141349252004210010740000000000000000000515003571314?bcid=interleaved2of5&includetext=1&textxalign=center&textsize=11"
         }
-    }
-}
+    },
+    "timeout": 30000
+}]

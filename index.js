@@ -9,11 +9,11 @@ const debug = (...msg) => {
     console.info(LOG_TAG, ...msg);
 };
 
-const bootstrap = async () => {
+const executeWebHook = async ({ url, form }) => {
     var payload = {
-        url: process.env.URL,
+        url,
         method: 'POST',
-        form: data,
+        form,
         timeout: 30000
     };
 
@@ -25,6 +25,16 @@ const bootstrap = async () => {
         debug(response.headers);
         debug(body);
     });
+};
+
+const bootstrap = async () => {
+    if(Array.isArray(data)) {
+        for(let wb of data) {
+            await executeWebHook(wb);
+        }
+    } else {
+        await executeWebHook(data);
+    }
 };
 
 bootstrap();
