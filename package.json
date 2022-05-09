@@ -4,12 +4,16 @@
   "description": "Webhooks Simulator Test Tool",
   "main": "index.js",
   "scripts": {
-    "start": "NODE_TLS_REJECT_UNAUTHORIZED=0 node index.js"
+    "start": "NODE_TLS_REJECT_UNAUTHORIZED=0 NODE_NO_WARNINGS=1 node index.js"
   },
   "author": "Mobbex, Co",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.27.2",
     "dotenv": "8.2.0",
-    "request": "2.88.2"
+    "qs": "^6.10.3"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.31"
   }
 }

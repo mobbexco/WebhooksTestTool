@@ -1,25 +1,15 @@
 [{
     "url": "https://local.dev/webhook/?order_id=000000019",
-    "method": "POST",
-    "form": {
+    "data": {
         "type": "checkout",
         "data": {
             "result": true,
             "view": {
-                "type": "card",
-                "options": {
-                    "data": [
-                        {
-                            "label": "Identificador de transacción",
-                            "type": "text",
-                            "value": "12345678"
-                        }
-                    ]
-                }
+                "type": "card"
             },
             "payment": {
-                "id": "lvn5KFSS7",
-                "description": "Orden Mi Compra",
+                "id": "ABC1234",
+                "description": "Mi Descripción",
                 "operation": {
                     "type": "payment.v2"
                 },
@@ -28,39 +18,58 @@
                     "text": "Aprobado",
                     "message": "Transacción Aprobada"
                 },
-                "total": 82,
+                "total": 1564.33,
                 "currency": {
-                    "code": "TEST",
-                    "text": "Test Money",
-                    "symbol": "T$"
+                    "code": "ARS",
+                    "text": "Peso Argentino",
+                    "symbol": "$"
                 },
-                "created": "2020-04-23T12:20:40.789Z",
-                "updated": "2020-04-23T12:20:41.297Z",
-                "reference": "000000020",
+                "riskAnalysis": {
+                    "band": "red",
+                    "level": 7.1
+                },
+                "created": "2020-12-04T21:27:26.348Z",
+                "updated": "2020-12-04T21:27:28.280Z",
+                "reference": "external_reference",
                 "source": {
-                    "name": "Visa Débito",
+                    "name": "Visa",
                     "type": "card",
-                    "number": "450799******0010",
+                    "reference": "visa",
+                    "number": "4507 15** **** 1234",
+                    "expiration": {
+                        "month": "10",
+                        "year": "23"
+                    },
                     "installment": {
-                        "description": "Debito",
-                        "amount": 82,
-                        "count": 1
+                        "description": "1 Cuota",
+                        "amount": 140,
+                        "count": 1,
+                        "reference": "1"
                     }
                 }
             },
+            "entity": {
+                "name": "Wayne Inc",
+                "uid": "iambatman"
+            },
+            "customer": {
+                "uid": "12123123",
+                "name": "Juan Perez Wayne",
+                "phone": "12123123",
+                "identification": "110303456",
+                "email": "soybatman@wayneinc.com"
+            },
             "user": {
-                "name": "Demo Mobbex",
-                "email": "demo@mobbex.com"
+                "name": "Juan Perez Wayne",
+                "email": "soybatman@wayneinc.com"
             },
             "source": {
-                "name": "Visa Débito",
+                "name": "Visa",
                 "type": "card",
-                "number": "450799******0010",
-                "installment": {
-                    "description": "Debito",
-                    "amount": 82,
-                    "count": 1
-                }
+                "reference": "visa"
+            },
+            "checkout": {
+                "uid": "TK0L70HEE9M4T6EBPH"
             }
         }
     },
